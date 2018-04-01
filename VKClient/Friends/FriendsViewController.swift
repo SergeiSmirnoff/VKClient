@@ -16,9 +16,10 @@ struct Response:Decodable {
     var item:Friends
     
 }
-struct Friends:Decodable {
-    var name:String
-    var imageUrl:URL?
+
+struct Friends: Decodable {
+    var name: String
+    var imageUrl: URL?
     
 }
 

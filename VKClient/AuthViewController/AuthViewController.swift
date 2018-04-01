@@ -11,7 +11,9 @@ import WebKit
 var theGlobalToken:String?
 
 class AuthViewController: UIViewController {
-  let userDefolts = UserDefaults.standard
+    
+  let userDefaults = UserDefaults.standard
+    
     @IBOutlet var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
@@ -65,9 +67,6 @@ extension AuthViewController: WKNavigationDelegate {
         UserDefaults.setValue(token, forKey: "theGlobalToken")
     }
 }
-
-/////
-//some shit
 
 
 //TODO: 1) Разобраться с UserDefaults

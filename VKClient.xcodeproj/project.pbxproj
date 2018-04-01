@@ -17,6 +17,7 @@
 		5033BB8E206F81A900594A04 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5033BB8D206F81A900594A04 /* FriendsViewController.xib */; };
 		5033BB91206F846B00594A04 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */; };
 		5033BB92206F846B00594A04 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5033BB90206F846B00594A04 /* FriendTableViewCell.xib */; };
+		CEE988142070DDF800B0941D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE988132070DDF800B0941D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5033BB8D206F81A900594A04 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		5033BB90206F846B00594A04 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		CEE988132070DDF800B0941D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		5033BB69206F669C00594A04 = {
 			isa = PBXGroup;
 			children = (
+				CEE988132070DDF800B0941D /* Default-568h@2x.png */,
 				5033BB74206F669C00594A04 /* VKClient */,
 				5033BB73206F669C00594A04 /* Products */,
 			);
@@ -64,9 +67,11 @@
 		5033BB74206F669C00594A04 /* VKClient */ = {
 			isa = PBXGroup;
 			children = (
+				5033BB81206F669D00594A04 /* Info.plist */,
 				5033BB87206F66A500594A04 /* SupportingFiles */,
 				5033BB8A206F66E300594A04 /* AuthViewController */,
-				5033BB81206F669D00594A04 /* Info.plist */,
+				CEE988112070DBB200B0941D /* Cell */,
+				CEE988122070DBD800B0941D /* Friends */,
 			);
 			path = VKClient;
 			sourceTree = "<group>";
@@ -87,12 +92,26 @@
 			children = (
 				5033BB77206F669C00594A04 /* AuthViewController.swift */,
 				5033BB88206F66DB00594A04 /* AuthViewController.xib */,
-				5033BB8B206F80E600594A04 /* FriendsViewController.swift */,
-				5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */,
-				5033BB90206F846B00594A04 /* FriendTableViewCell.xib */,
-				5033BB8D206F81A900594A04 /* FriendsViewController.xib */,
 			);
 			path = AuthViewController;
+			sourceTree = "<group>";
+		};
+		CEE988112070DBB200B0941D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5033BB90206F846B00594A04 /* FriendTableViewCell.xib */,
+				5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEE988122070DBD800B0941D /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				5033BB8B206F80E600594A04 /* FriendsViewController.swift */,
+				5033BB8D206F81A900594A04 /* FriendsViewController.xib */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +141,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = albert;
 				TargetAttributes = {
 					5033BB71206F669C00594A04 = {
@@ -159,6 +178,7 @@
 				5033BB8E206F81A900594A04 /* FriendsViewController.xib in Resources */,
 				5033BB80206F669D00594A04 /* LaunchScreen.storyboard in Resources */,
 				5033BB7D206F669D00594A04 /* Assets.xcassets in Resources */,
+				CEE988142070DDF800B0941D /* Default-568h@2x.png in Resources */,
 				5033BB7B206F669C00594A04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +233,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -220,6 +241,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -270,6 +292,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -277,6 +300,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -311,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46VFC6SDYF;
+				DEVELOPMENT_TEAM = 2TFV7M922A;
 				INFOPLIST_FILE = VKClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.test;
@@ -326,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46VFC6SDYF;
+				DEVELOPMENT_TEAM = 2TFV7M922A;
 				INFOPLIST_FILE = VKClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.test;

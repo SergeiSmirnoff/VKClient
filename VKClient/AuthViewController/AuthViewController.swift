@@ -10,7 +10,9 @@ import UIKit
 import WebKit
 
 class AuthViewController: UIViewController {
-  let userDefolts = UserDefaults.standard
+    
+  let userDefaults = UserDefaults.standard
+    
     @IBOutlet var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
@@ -60,12 +62,10 @@ extension AuthViewController: WKNavigationDelegate {
         
         let token = params["access_token"]
         decisionHandler(.cancel)
-        UserDefaults.setValue(token, forKey: "theToken")
+        userDefaults.setValue(token, forKey: "theToken")
     }
 }
 
-/////
-//1213123
 
 //TODO: 1) Разобраться с UserDefaults
 // 2) Разобраться с alamofire

@@ -8,14 +8,18 @@
 
 import Foundation
 import UIKit
-struct Response:Decodable {
-    var count:Int
-    var item:Friends
+
+
+
+struct Response: Decodable {
+    var count: Int
+    var item: Friends
     
 }
-struct Friends:Decodable {
-    var name:String
-    var imageUrl:URL?
+
+struct Friends: Decodable {
+    var name: String
+    var imageUrl: URL?
     
 }
 
@@ -46,22 +50,22 @@ extension FriendsViewController: UITableViewDataSource {
         return cell
     }
     
-    func getFriends() {
-        
-        let theURL = "https://api.vk.com/method/friends.get?access_token=\(theToken!)&fields=photo_50&lang=ru&count=100&version=5.69&"
-    
-        guard let url = URL(string: theURL) else {return}
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else {return}
-            guard error == nil else {return}
-            do{
-            try JSONDecoder().decode(Response.self, from: data)
-            } catch let error {
-                print ("error")
-            }
-        ///
-        }
-        
-    }
+//    func getFriends() {
+//        
+//        let theURL = "https://api.vk.com/method/friends.get?access_token=\(theToken!)&fields=photo_50&lang=ru&count=100&version=5.69&"
+//    
+//        guard let url = URL(string: theURL) else {return}
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            guard let data = data else {return}
+//            guard error == nil else {return}
+//            do{
+//            try JSONDecoder().decode(Response.self, from: data)
+//            } catch let error {
+//                print ("error")
+//            }
+//        
+//        }
+//        
+//    }
     
 }

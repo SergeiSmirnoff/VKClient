@@ -49,8 +49,11 @@ extension FriendsViewController: UITableViewDataSource {
         }
         return cell
     }
-    
-    
+    func getFriendsInfo() {
+       let theURL = "https://api.vk.com/method/friends.get?access_token=\(theGlobalToken!)&fields=photo_50&lang=ru&count=100&version=5.69&"    }
+    Alamofire.request(theURL).responseJSON { response in
+    print(response.value)
+    }
         
     }
     

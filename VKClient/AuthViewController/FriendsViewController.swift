@@ -59,7 +59,7 @@ extension FriendsViewController: UITableViewDataSource {
             } catch let error {
                 print ("error")
             }
-        
+        ///
         }
         
     }

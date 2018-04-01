@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+var theGlobalToken:String?
 
 class AuthViewController: UIViewController {
   let userDefolts = UserDefaults.standard
@@ -33,7 +34,7 @@ class AuthViewController: UIViewController {
 
 extension AuthViewController {
     @IBAction func getFriendList() {
-        print("Привет")
+        
     }  
 }
 
@@ -60,7 +61,8 @@ extension AuthViewController: WKNavigationDelegate {
         
         let token = params["access_token"]
         decisionHandler(.cancel)
-        UserDefaults.setValue(token, forKey: "theToken")
+        theGlobalToken = token
+        UserDefaults.setValue(token, forKey: "theGlobalToken")
     }
 }
 

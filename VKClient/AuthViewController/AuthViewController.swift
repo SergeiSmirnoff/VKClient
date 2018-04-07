@@ -8,11 +8,8 @@
 
 import UIKit
 import WebKit
-var theGlobalToken:String?
 
 class AuthViewController: UIViewController {
-    
-  let userDefaults = UserDefaults.standard
     
     @IBOutlet var webView: WKWebView! {
         didSet {
@@ -36,8 +33,12 @@ class AuthViewController: UIViewController {
 
 extension AuthViewController {
     @IBAction func getFriendList() {
-        
-    }  
+        guard let nibs = Bundle.main.loadNibNamed("FriendsViewController", owner: nil, options: nil),
+            let friendsVC = nibs[0] as? FriendsViewController else {
+                fatalError()
+        }
+        self.present(friendsVC, animated: true, completion: nil)
+    }
 }
 
 extension AuthViewController: WKNavigationDelegate {
@@ -61,10 +62,9 @@ extension AuthViewController: WKNavigationDelegate {
                 return dict
         }
         
-        let token = params["access_token"]
+        let token = params["access_token"]!
+        UserSettings.token = token
         decisionHandler(.cancel)
-        theGlobalToken = token
-        UserDefaults.setValue(token, forKey: "theGlobalToken")
     }
 }
 

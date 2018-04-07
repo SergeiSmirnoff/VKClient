@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,19 +26,30 @@
                             <constraint firstAttribute="height" constant="50" id="kaQ-UP-eqv"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-r9-gLk">
-                        <rect key="frame" x="92" y="19" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-r9-gLk">
+                        <rect key="frame" x="92" y="19" width="170" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-hz-Pml">
+                        <rect key="frame" x="284" y="19" width="20" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="41R-SG-Bji"/>
+                            <constraint firstAttribute="height" constant="20" id="QLM-TF-9WE"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ltQ-hz-Pml" firstAttribute="leading" secondItem="RcD-r9-gLk" secondAttribute="trailing" constant="22" id="2Vm-QT-8nx"/>
                     <constraint firstItem="RcD-r9-gLk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="DGe-i6-3Mj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="RcD-r9-gLk" secondAttribute="bottom" constant="9" id="FzU-0p-fPg"/>
+                    <constraint firstAttribute="trailing" secondItem="ltQ-hz-Pml" secondAttribute="trailing" constant="16" id="G9j-OX-xKO"/>
                     <constraint firstAttribute="bottom" secondItem="bSa-73-w52" secondAttribute="bottom" constant="5" id="Pr3-Ku-0Ll"/>
                     <constraint firstItem="bSa-73-w52" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="W42-PN-uCi"/>
                     <constraint firstItem="bSa-73-w52" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iJO-cf-nI9"/>
+                    <constraint firstItem="ltQ-hz-Pml" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="x88-Vu-OaB"/>
                     <constraint firstItem="RcD-r9-gLk" firstAttribute="leading" secondItem="bSa-73-w52" secondAttribute="trailing" constant="26" id="ySh-ko-yt4"/>
                 </constraints>
             </tableViewCellContentView>
@@ -47,6 +57,7 @@
             <connections>
                 <outlet property="nameLabel" destination="RcD-r9-gLk" id="iyf-rv-DbR"/>
                 <outlet property="photoImageView" destination="bSa-73-w52" id="3VJ-FV-A0n"/>
+                <outlet property="statusView" destination="ltQ-hz-Pml" id="5Iv-aa-5fp"/>
             </connections>
             <point key="canvasLocation" x="34" y="62"/>
         </tableViewCell>

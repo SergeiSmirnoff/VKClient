@@ -18,7 +18,8 @@
 		5033BB8E206F81A900594A04 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5033BB8D206F81A900594A04 /* FriendsViewController.xib */; };
 		5033BB91206F846B00594A04 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */; };
 		5033BB92206F846B00594A04 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5033BB90206F846B00594A04 /* FriendTableViewCell.xib */; };
-		CEE988142070DDF800B0941D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE988132070DDF800B0941D /* Default-568h@2x.png */; };
+		50C1329F20789E9500CD2768 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1329E20789E9500CD2768 /* UserSettings.swift */; };
+		CEE988142070DDF800B0941D /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5033BB8D206F81A900594A04 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		5033BB90206F846B00594A04 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		50C1329E20789E9500CD2768 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		5C253EC2FDCE6AC72A99FC59 /* Pods_VKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33B548C7AC6D0BB935B8901 /* Pods-VKClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKClient/Pods-VKClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +64,6 @@
 		5033BB69206F669C00594A04 = {
 			isa = PBXGroup;
 			children = (
-				CEE988132070DDF800B0941D /* Default-568h@2x.png */,
 				5033BB74206F669C00594A04 /* VKClient */,
 				5033BB73206F669C00594A04 /* Products */,
 				D678BB9979B5EBC428DF5B1D /* Pods */,
@@ -97,6 +98,7 @@
 				5033BB79206F669C00594A04 /* Main.storyboard */,
 				5033BB7C206F669D00594A04 /* Assets.xcassets */,
 				5033BB7E206F669D00594A04 /* LaunchScreen.storyboard */,
+				50C1329E20789E9500CD2768 /* UserSettings.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -204,7 +206,7 @@
 				5033BB8E206F81A900594A04 /* FriendsViewController.xib in Resources */,
 				5033BB80206F669D00594A04 /* LaunchScreen.storyboard in Resources */,
 				5033BB7D206F669D00594A04 /* Assets.xcassets in Resources */,
-				CEE988142070DDF800B0941D /* Default-568h@2x.png in Resources */,
+				CEE988142070DDF800B0941D /* BuildFile in Resources */,
 				5033BB7B206F669C00594A04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,10 +240,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VKClient/Pods-VKClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,6 +277,7 @@
 				5033BB8C206F80E600594A04 /* FriendsViewController.swift in Sources */,
 				5033BB78206F669C00594A04 /* AuthViewController.swift in Sources */,
 				5033BB76206F669C00594A04 /* AppDelegate.swift in Sources */,
+				50C1329F20789E9500CD2768 /* UserSettings.swift in Sources */,
 				5033BB91206F846B00594A04 /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +421,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2TFV7M922A;
+				DEVELOPMENT_TEAM = 46VFC6SDYF;
 				INFOPLIST_FILE = VKClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,8 +438,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2TFV7M922A;
+				DEVELOPMENT_TEAM = 46VFC6SDYF;
 				INFOPLIST_FILE = VKClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";

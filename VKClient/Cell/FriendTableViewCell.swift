@@ -12,6 +12,7 @@ class FriendTableViewCell: UITableViewCell {
 
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var statusView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

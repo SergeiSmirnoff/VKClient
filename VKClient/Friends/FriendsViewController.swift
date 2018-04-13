@@ -26,16 +26,35 @@ struct Friend: Codable {
 }
 
 
-class FriendsViewController: UIViewController {
+class FriendsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    lazy var refresh:UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+        return refreshControl
+    }()
+    @objc
+    func requestData() {
+         getFriendsInfo()
+        let deadline = DispatchTime.now() + .milliseconds(700)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+        self.refresh.endRefreshing()
+        }
+        
+    }
     
     @IBOutlet var tableView: UITableView!
     
     var friends = [Friend]()
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         getFriendsInfo()
+        tableView.refreshControl = refresh
+       tableView.refreshControl = UIRefreshControl()
     }
     
     private func registerCell () {
@@ -68,7 +87,7 @@ class FriendsViewController: UIViewController {
     }
 }
 
-extension FriendsViewController: UITableViewDataSource {
+extension FriendsViewController  {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,6 +119,11 @@ extension FriendsViewController: UITableViewDataSource {
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     let selectedRow = indexPath.row
+       
+    }
+    
 }
 
 

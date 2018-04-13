@@ -19,7 +19,9 @@
 		5033BB91206F846B00594A04 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033BB8F206F846B00594A04 /* FriendTableViewCell.swift */; };
 		5033BB92206F846B00594A04 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5033BB90206F846B00594A04 /* FriendTableViewCell.xib */; };
 		50C1329F20789E9500CD2768 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1329E20789E9500CD2768 /* UserSettings.swift */; };
-		CEE988142070DDF800B0941D /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		B45580D12080D15D001D616C /* FriendInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45580CF2080D15D001D616C /* FriendInfoViewController.swift */; };
+		B45580D22080D15D001D616C /* FriendInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45580D02080D15D001D616C /* FriendInfoViewController.xib */; };
+		CEE988142070DDF800B0941D /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5033BB90206F846B00594A04 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		50C1329E20789E9500CD2768 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		5C253EC2FDCE6AC72A99FC59 /* Pods_VKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45580CF2080D15D001D616C /* FriendInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoViewController.swift; sourceTree = "<group>"; };
+		B45580D02080D15D001D616C /* FriendInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendInfoViewController.xib; sourceTree = "<group>"; };
 		C33B548C7AC6D0BB935B8901 /* Pods-VKClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKClient/Pods-VKClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +86,7 @@
 		5033BB74206F669C00594A04 /* VKClient */ = {
 			isa = PBXGroup;
 			children = (
-				5033BB81206F669D00594A04 /* Info.plist */,
+				B45580C42080C942001D616C /* FriendsInfo */,
 				5033BB87206F66A500594A04 /* SupportingFiles */,
 				5033BB8A206F66E300594A04 /* AuthViewController */,
 				CEE988112070DBB200B0941D /* Cell */,
@@ -98,6 +102,7 @@
 				5033BB79206F669C00594A04 /* Main.storyboard */,
 				5033BB7C206F669D00594A04 /* Assets.xcassets */,
 				5033BB7E206F669D00594A04 /* LaunchScreen.storyboard */,
+				5033BB81206F669D00594A04 /* Info.plist */,
 				50C1329E20789E9500CD2768 /* UserSettings.swift */,
 			);
 			path = SupportingFiles;
@@ -110,6 +115,15 @@
 				5033BB88206F66DB00594A04 /* AuthViewController.xib */,
 			);
 			path = AuthViewController;
+			sourceTree = "<group>";
+		};
+		B45580C42080C942001D616C /* FriendsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B45580CF2080D15D001D616C /* FriendInfoViewController.swift */,
+				B45580D02080D15D001D616C /* FriendInfoViewController.xib */,
+			);
+			path = FriendsInfo;
 			sourceTree = "<group>";
 		};
 		CEE988112070DBB200B0941D /* Cell */ = {
@@ -201,12 +215,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45580D22080D15D001D616C /* FriendInfoViewController.xib in Resources */,
 				5033BB89206F66DB00594A04 /* AuthViewController.xib in Resources */,
 				5033BB92206F846B00594A04 /* FriendTableViewCell.xib in Resources */,
 				5033BB8E206F81A900594A04 /* FriendsViewController.xib in Resources */,
 				5033BB80206F669D00594A04 /* LaunchScreen.storyboard in Resources */,
 				5033BB7D206F669D00594A04 /* Assets.xcassets in Resources */,
-				CEE988142070DDF800B0941D /* BuildFile in Resources */,
+				CEE988142070DDF800B0941D /* (null) in Resources */,
 				5033BB7B206F669C00594A04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +291,7 @@
 			files = (
 				5033BB8C206F80E600594A04 /* FriendsViewController.swift in Sources */,
 				5033BB78206F669C00594A04 /* AuthViewController.swift in Sources */,
+				B45580D12080D15D001D616C /* FriendInfoViewController.swift in Sources */,
 				5033BB76206F669C00594A04 /* AppDelegate.swift in Sources */,
 				50C1329F20789E9500CD2768 /* UserSettings.swift in Sources */,
 				5033BB91206F846B00594A04 /* FriendTableViewCell.swift in Sources */,
